@@ -18,7 +18,7 @@ public:
             // Can be converted in a block of 2 characters if the subsequent conditions are true
             if(s[i-2] == '1')
                 dp[i] += dp[i-2];
-            else if(s[i-2] == '2' && s[i-1] >=48 && s[i-1] <= 54)
+            else if(s[i-2] == '2' && s[i-1] >=48 && s[i-1] <= 54) // ASCII of 0 = 48 and 6 = 54
                 dp[i] += dp[i-2];
             
             cout<<dp[i]<<endl;
