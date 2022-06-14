@@ -8,7 +8,7 @@ public:
         int n = s.size();
         
         vector<int> dp(n+1);
-        dp[0] = 1;
+        dp[0] = 1; // it can be 0 if s.size() = 0
         dp[1] = 1;
         
         for(int i = 2 ; i<=n ; i++){
