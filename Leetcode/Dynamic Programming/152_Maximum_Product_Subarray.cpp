@@ -11,7 +11,7 @@ public:
         dp_max_ending_here[0] = nums[0];  
         dp_min_ending_here[0] = nums[0];
         
-        // [2,-3,-4,-4,5] --> use this eg for understanding the use of 2 dp arrays for max and min.
+        // [2,-3,-4,-4,-5] --> use this eg for understanding the use of 2 dp arrays for max and min.
         
         for(int i = 1 ; i<n ; i++){
             
