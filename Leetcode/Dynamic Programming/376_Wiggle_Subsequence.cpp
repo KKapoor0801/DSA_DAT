@@ -33,6 +33,10 @@ public:
             }
         
         }
+        
+        // We use (n-1)th element for maxLen because the last elements of these vectors store the final lengths of the positive diff & 
+        // negative diff wiggle subsequences
+        
         maxLen = max(dp_pos[n-1], dp_neg[n-1]);
         return maxLen;
     }
