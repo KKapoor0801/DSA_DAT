@@ -18,12 +18,12 @@ public:
         for(int i = 1 ; i<n ; i++){
             
             if(nums[i] > nums[i-1]){
-                dp_pos[i] = 1 + dp_neg[i-1];
+                dp_pos[i] += dp_neg[i-1];
                 dp_neg[i] = dp_neg[i-1];
             }
             
             if(nums[i] < nums[i-1]){
-                dp_neg[i] = 1 + dp_pos[i-1];
+                dp_neg[i] += dp_pos[i-1];
                 dp_pos[i] = dp_pos[i-1];
             }
             
