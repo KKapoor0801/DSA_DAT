@@ -12,22 +12,37 @@ class Solution {
 public:
     ListNode* middleNode(ListNode* head) {
         
-        int length = 0;
-        ListNode *temp = head;
-        while(temp != NULL){
-            length++;
-            temp = temp->next;
+        // O(n) faster solution - SLOW (TORTOISE) AND FAST (HARE) POINTERS
+        
+        ListNode *slow = head, *fast = head;
+        
+        while(fast != NULL && fast->next != NULL){
+            
+            fast = fast->next->next;
+            slow = slow->next;
+            
         }
         
-        int mid = length/2 + 1;
+        return slow;
         
-        int i = 1;
-        while(i < mid){
-            head = head->next;
-            i++;
-        }
+        // O(n) solution but slightly slower
         
-        return head;
+//         int length = 0;
+//         ListNode *temp = head;
+//         while(temp != NULL){
+//             length++;
+//             temp = temp->next;
+//         }
+        
+//         int mid = length/2 + 1;
+        
+//         int i = 1;
+//         while(i < mid){
+//             head = head->next;
+//             i++;
+//         }
+        
+//         return head;
         
     }
 };
